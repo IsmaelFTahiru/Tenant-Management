@@ -1,5 +1,5 @@
 'use strict';
-import { tenantDB } from './tenantManagementDB.js';
+//import { tenantDB } from './tenantManagementDB.js';
 
 const tenantSearchButton = document.getElementById('tenantSearchButton');
 const tenantSearch = document.getElementById('tenantSearch');
