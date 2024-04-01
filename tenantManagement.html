@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<header title="tenantManagement"></header>
+<link lang="en" rel="stylesheet" type="text/css" href="tenantManagement.css">
+
+<body class="body">
+    <h1 id="deleteTenantTableEasterEgg">TenMan.</h1>
+    <div class="tenantSearch">
+        <input type="search" id="tenantSearch" placeholder="Tenant-ID or Name">
+        <button id="tenantSearchButton">search</button>
+    </div>
+
+    <div hidden class="newTenantComponent">
+        <form class="newTenantForm" method="post">
+            <h1>New Tenant Info Input</h1>
+            <input type="text" placeholder="Tenant Name" id="tenantName" name="name">
+            <br>
+            <input type="number" placeholder="Licenses" min="1" id="tenantLicenses" name="licenses">
+            <br>
+            <input type="submit" value="Create Tenant" id="createTenant">
+        </form>
+    </div>
+    <div class="tenantTableContaier">
+        <button hidden id="deleteTableButton" value="Delete Table Data"></button>
+        <button hidden id="deleteTenantButton">Delete selected Tenant/-s</button>
+        <div class="sortTableContainer">
+            <div class="sortButton">
+                <button id="sortTableButton">Sort Table</button>
+            </div>
+            <div class="sortTableOptions">
+                <a id="sortTableName">Sort by name</a>
+                <a id="sortTableLicences0">Sort by licenses(most to least)</a>
+                <a id="sortTableLicences1">Sort by by licenses(least to most)</a>
+            </div>
+        </div>
+
+        <br>
+        <table class="tenantTable" id="tenantTable">
+            <thead>
+                <tr>
+                    <th>Tenant-ID</th>
+                    <th>Tenant Name</th>
+                    <th>Licenses</th>
+                    <!---th>Active User</th--->
+                </tr>
+            </thead>
+            <tbody class="tableBody">
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="pagination" class="tenantTablePagination">
+        </div>
+    </div>
+    <div class="tenantCreation">
+        <button id="newTenantBtn">Create a new Tenant</button>
+    </div>
+</body>
+<script src="tenantManagement.js"></script>
